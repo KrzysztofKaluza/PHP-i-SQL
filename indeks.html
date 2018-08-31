@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Formularz dodawania aut</title>
+	</head>
+	<body>
+		<p> Dodawanie </p>
+		<form method="post" action="do_bazy.php">
+			Podaj marke: <input type="text" name="marka"><br/>
+			Podaj model: <input type="text" name="model"><br/>
+			Podaj rok: <input type="text" name="rok"><br/>
+			<input type="submit" name="przycisk">
+		</form>
+		<br/>
+		<br/>
+		<p> Wyszukiwanie </p>
+		<form method="post" action="z_bazy.php">
+			Wyszukaj po:<select name="kolumna">
+					<option value="id">ID</option>
+					<option value="marka">MARKA</option>
+					<option value="model">MODEL</option>
+					<option value="rok">ROK</option>
+				</select><br/>
+			Wyszukaj:<input type="text" name="wyszukiwarka">
+			<input type="submit" name="wyszukaj">
+		</form>	
+		<br/>
+		<br/>
+		<p> Usuwanie </p>
+		<form method="post" action="usun_wiersz.php">
+			Usuń po:<select name="kolumna2">
+					<option value="id">ID</option>
+					<option value="marka">MARKA</option>
+					<option value="model">MODEL</option>
+					<option value="rok">ROK</option>
+				</select><br/>
+			Usuń:<input type="text" name="kasowanie">
+			<input type="submit" name="kasuj">
+		</form>
+	</body>
+</html>
